@@ -1,0 +1,27 @@
+
+
+<h1>Name: <%= @courier.name %></h1>
+
+<p>Email: <%= @courier.email %></p>
+
+<%= form_with model: [@courier, @courier.packages.build] do |form| %>
+
+    <div>
+        <p><%= form.label :tracking_number %>:</p>
+        <p><%= form.text_field :tracking_number %></p>
+    </div>
+
+    <div>
+        <p><%= form.label :delivery_status %>:</p>
+        <p><%= form.select :delivery_status, [true, false] %></p>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+
+<% end %>
+
+<%= link_to "<- All couriers", root_path %>
+

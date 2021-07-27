@@ -1,0 +1,18 @@
+<%= form_with model: @package do |form| %>
+
+    <div>
+        <%= form.label :tracking_number %>
+        <%= form.text_field :tracking_number %>
+    </div>
+
+    <div>
+        <%= form.label :delivery_status %>
+        <%= form.text_field :delivery_status %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+
+<% end %>

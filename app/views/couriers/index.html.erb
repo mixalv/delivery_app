@@ -1,0 +1,19 @@
+<br>
+<%= link_to "Create New Courier", new_courier_path %>
+<h1>Couriers: </h1>
+<ul>
+<% @couriers.each do |courier| %>
+    <li>
+    <p>Name:<%= courier.name %></p>
+        <ul>
+            <li>
+                <%= link_to "View courier", courier %>
+            </li>
+            <li>
+                <%= link_to "Edit courier", edit_courier_path(courier) %>
+            </li>
+        </ul>
+    </li>
+
+<% end %>
+</ul>
